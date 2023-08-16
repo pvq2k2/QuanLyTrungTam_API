@@ -1,6 +1,6 @@
 ﻿namespace QuanLyTrungTam_API.Entities
 {
-    public class TinhTrangHoc
+    public class TinhTrangHoc : BaseEntity
     {
         public string TenTinhTrang { get; set; } = string.Empty;
 
