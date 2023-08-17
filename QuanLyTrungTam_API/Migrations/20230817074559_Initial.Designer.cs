@@ -12,8 +12,8 @@ using QuanLyTrungTam_API.DBContext;
 namespace QuanLyTrungTam_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230816133208_initial")]
-    partial class initial
+    [Migration("20230817074559_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -223,8 +223,8 @@ namespace QuanLyTrungTam_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ThoiGianHoc")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("ThoiGianHoc")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
@@ -303,7 +303,7 @@ namespace QuanLyTrungTam_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("taiKhoan")
+                    b.Property<string>("TenTaiKhoan")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

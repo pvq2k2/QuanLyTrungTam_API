@@ -220,8 +220,8 @@ namespace QuanLyTrungTam_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ThoiGianHoc")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("ThoiGianHoc")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
@@ -300,7 +300,7 @@ namespace QuanLyTrungTam_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("taiKhoan")
+                    b.Property<string>("TenTaiKhoan")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

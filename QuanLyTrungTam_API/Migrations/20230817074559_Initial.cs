@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace QuanLyTrungTam_API.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -112,7 +112,7 @@ namespace QuanLyTrungTam_API.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TenKhoaHoc = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ThoiGianHoc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ThoiGianHoc = table.Column<int>(type: "int", nullable: false),
                     GioiThieu = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NoiDung = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HocPhi = table.Column<int>(type: "int", nullable: false),
@@ -139,7 +139,7 @@ namespace QuanLyTrungTam_API.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TenNguoiDung = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    taiKhoan = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TenTaiKhoan = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MatKhau = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     QuyenHanID = table.Column<int>(type: "int", nullable: false)
                 },
