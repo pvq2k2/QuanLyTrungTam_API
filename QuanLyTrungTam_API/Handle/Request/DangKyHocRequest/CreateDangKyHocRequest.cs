@@ -4,7 +4,6 @@
     {
         public int KhoaHocID { get; set; }
         public int HocVienID { get; set; }
-        public int TinhTrangHocID { get; set; }
         public int TaiKhoanID { get; set; }
     }
 }

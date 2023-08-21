@@ -16,13 +16,23 @@ namespace QuanLyTrungTam_API.Handle.Converter
             };
         }
 
+        public List<DangKyHocDTO> ListEntityDangKyHocToDTO(List<DangKyHoc> listDangKyHoc)
+        {
+            var listDangKyHocDTO = new List<DangKyHocDTO>();
+            foreach (var dangKyHoc in listDangKyHoc)
+            {
+                listDangKyHocDTO.Add(EntityDangKyHocToDTO(dangKyHoc));
+            }
+
+            return listDangKyHocDTO;
+        }
+
         public DangKyHoc CreateDangKyHoc(CreateDangKyHocRequest request)
         {
             return new DangKyHoc
             {
                 KhoaHocID = request.KhoaHocID,
                 HocVienID = request.HocVienID,
-                TinhTrangHocID = request.TinhTrangHocID,
                 TaiKhoanID = request.TaiKhoanID
             };
         }

@@ -15,6 +15,17 @@ namespace QuanLyTrungTam_API.Handle.Converter
             };
         }
 
+        public List<ChuDeDTO> ListEntityChuDeToDTO(List<ChuDe> listChuDe)
+        {
+            var listChuDeDTO = new List<ChuDeDTO>();
+            foreach (var chuDe in listChuDe)
+            {
+                listChuDeDTO.Add(EntityChuDeToDTO(chuDe));
+            }
+
+            return listChuDeDTO;
+        }
+
         public ChuDe CreateChuDe(CreateChuDeRequest request)
         {
             return new ChuDe

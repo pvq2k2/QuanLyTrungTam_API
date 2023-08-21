@@ -14,6 +14,17 @@ namespace QuanLyTrungTam_API.Handle.Converter
             };
         }
 
+        public List<LoaiKhoaHocDTO> ListEntityLoaiKhoaHocToDTO(List<LoaiKhoaHoc> listLoaiKhoaHoc)
+        {
+            var listLoaiKhoaHocDTO = new List<LoaiKhoaHocDTO>();
+            foreach (var loaiKhoaHoc in listLoaiKhoaHoc)
+            {
+                listLoaiKhoaHocDTO.Add(EntityLoaiKhoaHocToDTO(loaiKhoaHoc));
+            }
+
+            return listLoaiKhoaHocDTO;
+        }
+
         public LoaiKhoaHoc CreateLoaiKhoaHoc(CreateLoaiKhoaHocRequest request)
         {
             return new LoaiKhoaHoc

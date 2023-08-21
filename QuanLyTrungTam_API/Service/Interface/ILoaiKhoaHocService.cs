@@ -10,7 +10,7 @@ namespace QuanLyTrungTam_API.Service.Interface
         public PageResult<LoaiKhoaHocDTO> GetAllLoaiKhoaHoc(Pagination pagination);
         public ResponseData<LoaiKhoaHocDTO> GetLoaiKhoaHocByID(int loaiKhoaHocID);
         public ResponseData<LoaiKhoaHocDTO> CreateLoaiKhoaHoc(CreateLoaiKhoaHocRequest request);
-        public ResponseData<LoaiKhoaHocDTO> UpadateLoaiKhoaHoc(int loaiKhoaHocID, UpdateLoaiKhoaHocRequest request);
+        public ResponseData<LoaiKhoaHocDTO> UpdateLoaiKhoaHoc(int loaiKhoaHocID, UpdateLoaiKhoaHocRequest request);
         public ResponseData<LoaiKhoaHocDTO> RemoveLoaiKhoaHoc(int loaiKhoaHocID);
     }
 }

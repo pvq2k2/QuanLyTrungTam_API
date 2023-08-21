@@ -14,6 +14,17 @@ namespace QuanLyTrungTam_API.Handle.Converter
             };
         }
 
+        public List<QuyenHanDTO> ListEntityQuyenHanToDTO(List<QuyenHan> listQuyenHan)
+        {
+            var listQuyenHanDTO = new List<QuyenHanDTO>();
+            foreach (var quyenHan in listQuyenHan)
+            {
+                listQuyenHanDTO.Add(EntityQuyenHanToDTO(quyenHan));
+            }
+
+            return listQuyenHanDTO;
+        }
+
         public QuyenHan CreateQuyenHan(CreateQuyenHanRequest request)
         {
             return new QuyenHan

@@ -15,6 +15,17 @@ namespace QuanLyTrungTam_API.Handle.Converter
             };
         }
 
+        public List<TaiKhoanDTO> ListEntityTaiKhoanToDTO(List<TaiKhoan> listTaiKhoan)
+        {
+            var listTaiKhoanDTO = new List<TaiKhoanDTO>();
+            foreach (var taiKhoan in listTaiKhoan)
+            {
+                listTaiKhoanDTO.Add(EntityTaiKhoanToDTO(taiKhoan));
+            }
+
+            return listTaiKhoanDTO;
+        }
+
         public TaiKhoan CreateTaiKhoan(CreateTaiKhoanRequest request)
         {
             return new TaiKhoan

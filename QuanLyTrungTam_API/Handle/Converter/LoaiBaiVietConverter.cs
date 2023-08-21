@@ -6,11 +6,22 @@ namespace QuanLyTrungTam_API.Handle.Converter
 {
     public class LoaiBaiVietConverter
     {
-        public LoaiBaiVietDTO EntityLoaiBaiVietDTO(LoaiBaiViet loaiBaiViet)
+        public LoaiBaiVietDTO EntityLoaiBaiVietToDTO(LoaiBaiViet loaiBaiViet)
         {
             return new LoaiBaiVietDTO {
                 TenLoai = loaiBaiViet.TenLoai,
             };
+        }
+
+        public List<LoaiBaiVietDTO> ListEntityLoaiBaiVietToDTO(List<LoaiBaiViet> listLoaiBaiViet)
+        {
+            var listLoaiBaiVietDTO = new List<LoaiBaiVietDTO>();
+            foreach (var loaiBaiViet in listLoaiBaiViet)
+            {
+                listLoaiBaiVietDTO.Add(EntityLoaiBaiVietToDTO(loaiBaiViet));
+            }
+
+            return listLoaiBaiVietDTO;
         }
 
         public LoaiBaiViet CreateLoaiBaiViet(CreateLoaiBaiVietRequest request)

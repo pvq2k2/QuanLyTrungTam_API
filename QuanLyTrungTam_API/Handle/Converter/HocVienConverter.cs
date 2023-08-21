@@ -22,6 +22,17 @@ namespace QuanLyTrungTam_API.Handle.Converter
             };
         }
 
+        public List<HocVienDTO> ListEntityHocVienToDTO(List<HocVien> listHocVien)
+        {
+            var listHocVienDTO = new List<HocVienDTO>();
+            foreach (var hocVien in listHocVien)
+            {
+                listHocVienDTO.Add(EntityHocVienToDTO(hocVien));
+            }
+
+            return listHocVienDTO;
+        }
+
         public HocVien CreateHocVien(CreateHocVienRequest request)
         {
             return new HocVien

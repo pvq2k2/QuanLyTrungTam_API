@@ -19,6 +19,17 @@ namespace QuanLyTrungTam_API.Handle.Converter
             };
         }
 
+        public List<BaiVietDTO> ListEntityBaiVietToDTO(List<BaiViet> listBaiViet)
+        {
+            var listBaiVietDTO = new List<BaiVietDTO>();
+            foreach (var baiViet in listBaiViet)
+            {
+                listBaiVietDTO.Add(EntityBaiVietToDTO(baiViet));
+            }
+
+            return listBaiVietDTO;
+        }
+
         public BaiViet CreateBaiViet(CreateBaiVietRequest request)
         {
             return new BaiViet
