@@ -12,7 +12,7 @@ using QuanLyTrungTam_API.DBContext;
 namespace QuanLyTrungTam_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230817074559_Initial")]
+    [Migration("20230822084529_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -307,6 +307,10 @@ namespace QuanLyTrungTam_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ID");
 
                     b.HasIndex("QuyenHanID");
@@ -409,11 +413,13 @@ namespace QuanLyTrungTam_API.Migrations
 
             modelBuilder.Entity("QuanLyTrungTam_API.Entities.TaiKhoan", b =>
                 {
-                    b.HasOne("QuanLyTrungTam_API.Entities.QuyenHan", null)
+                    b.HasOne("QuanLyTrungTam_API.Entities.QuyenHan", "QuyenHan")
                         .WithMany("ListTaiKhoan")
                         .HasForeignKey("QuyenHanID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("QuyenHan");
                 });
 
             modelBuilder.Entity("QuanLyTrungTam_API.Entities.ChuDe", b =>

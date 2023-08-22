@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QuanLyTrungTam_API.Handle.Request.KhoaHocRequest;
 using QuanLyTrungTam_API.Helper;
@@ -7,6 +8,7 @@ using QuanLyTrungTam_API.Service.Interface;
 
 namespace QuanLyTrungTam_API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class KhoaHocController : ControllerBase

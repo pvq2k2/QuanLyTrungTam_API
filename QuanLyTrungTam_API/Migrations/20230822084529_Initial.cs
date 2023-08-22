@@ -141,6 +141,7 @@ namespace QuanLyTrungTam_API.Migrations
                     TenNguoiDung = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TenTaiKhoan = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MatKhau = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Token = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     QuyenHanID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
