@@ -7,6 +7,7 @@
         public string MatKhau { get; set; } = string.Empty;
         public int QuyenHanID { get; set; }
 
+        public QuyenHan? QuyenHan { get; set; }
         public IEnumerable<DangKyHoc>? ListDangKyHoc { get; set; }
         public IEnumerable<BaiViet>? ListBaiViet { get; set; }
     }
